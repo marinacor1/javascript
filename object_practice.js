@@ -12,3 +12,5 @@ var age1 = bob.age;
 // finish this code by saving Susan's information
 var name2 = susan.name;
 var age2 = susan.age;
+
+//Known as properties and values, instead of keys and values
