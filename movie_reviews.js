@@ -1,10 +1,10 @@
 var getReview = function (movie) {
   switch(movie) {
    case "Toy Story 2":
-      return "Great story. Mean prospectorl";
+      return "Great story. Mean prospector.";
       break;
     case "Finding Nemo":
-      return "Cool animation, and funny turles.";
+      return "Cool animation, and funny turtles.";
       break;
     case "The Lion King":
       return "Great songs.";
