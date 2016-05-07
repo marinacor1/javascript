@@ -24,3 +24,14 @@ function list() {
 		printPerson(contacts[i]);
 	}
 }
+
+function search(lastName) {
+ var contactsLength = contacts.length;
+ for (var i = 0; i < contactsLength; i++) {
+  if (lastName === contacts[i].lastName){
+    printPerson(contacts[i]);
+  }
+ }
+}
+
+search("Jones");
