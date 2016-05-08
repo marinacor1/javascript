@@ -6,8 +6,20 @@ function Person(job, married) {
         console.log("Hello!");
     }
 
-    
-}
 
+}
+//With params
 var user = new Person("Codecademy Student",false);
 user.speak();
+
+
+var james = {
+    job: "programmer",
+    married: false,
+    speak: function(feelings) {
+      console.log("Hello, I am feeling" + " " + feelings);
+    }
+};
+
+james.speak("great");
+james.speak("just okay");
