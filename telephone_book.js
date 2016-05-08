@@ -35,3 +35,18 @@ function search(lastName) {
 }
 
 search("Jones");
+/*Create a search function
+then call it passing "Jones"*/
+
+function add(firstName, lastName, email, phoneNumber) {
+contacts[contacts.length] = {
+ firstName: firstName,
+ lastName: lastName,
+ phoneNumber: phoneNumber,
+ email: email,
+}
+}
+
+add("Marina", "Corona", "m@g.com", "911");
+
+list();
