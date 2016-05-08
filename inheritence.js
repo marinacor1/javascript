@@ -1,17 +1,24 @@
-// the original Animal class and sayName method
+// original classes
 function Animal(name, numLegs) {
     this.name = name;
     this.numLegs = numLegs;
+    this.isAlive = true;
 }
-Animal.prototype.sayName = function() {
-    console.log("Hi my name is " + this.name);
-};
-
-// define a Penguin class
-function Penguin(name, numLegs) {
- this.name = name;
- this.numLegs = 2;
+function Penguin(name) {
+    this.name = name;
+    this.numLegs = 2;
+}
+function Emperor(name) {
+    this.name = name;
+    this.saying = "Waddle waddle";
 }
 
-// set its prototype to be a new instance of Animal
+// set up the prototype chain
 Penguin.prototype = new Animal();
+Emperor.prototype = new Penguin();
+
+var myEmperor = new Emperor("Jules");
+
+console.log( myEmperor.saying ); // should print "Waddle waddle"
+console.log( myEmperor.numLegs  ); // should print 2
+console.log( myEmperor.isAlive  ); // should print true
