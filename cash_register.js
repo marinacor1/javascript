@@ -1,16 +1,35 @@
 var cashRegister = {
-    total:0,
+    total: 0,
     add: function(itemCost){
-        this.total += itemCost;
+      this.total += itemCost;
+    },
+    scan: function (item) {
+        switch (item) {
+        case "eggs":
+            this.add(0.98);
+            break;
+
+        case "milk":
+            this.add(1.23);
+            break;
+        case "magazine":
+            this.add(4.99);
+            break;
+        case "chocolate":
+            this.add(0.45);
+            break;
+
+        }
+        return true;
     }
 };
 
-
-//call the add method for our items
-cashRegister.add(0.98);
-cashRegister.add(1.23);
-cashRegister.add(4.99);
-cashRegister.add(0.45);
+cashRegister.scan("eggs");
+cashRegister.scan("eggs");
+cashRegister.scan("magazine");
+cashRegister.scan("magazine");
+cashRegister.scan("magazine");
+//Scan 2 eggs and 3 magazines
 
 //Show the total bill
 console.log('Your bill is '+cashRegister.total);
